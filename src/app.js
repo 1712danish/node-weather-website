@@ -10,12 +10,12 @@ const port = process.env.PORT || 3000
 //config paths for node
 const public = path.join(__dirname,'../public')
 const viewpath=path.join(__dirname,'../templates/views')
-const partiaPath=path.join(__dirname,'../templates/partials')
+const partialPath=path.join(__dirname,'../templates/partials')
 
 //setup handlers engine views and partials
 app.set('view engine','hbs')
 app.set('views',viewpath)
-hbs.registerPartials(partiaPath)
+hbs.registerPartials(partialPath)
 
 app.use(express.static(public))
 
